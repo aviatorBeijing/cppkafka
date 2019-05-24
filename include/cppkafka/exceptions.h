@@ -139,7 +139,12 @@ private:
  */
 class CPPKAFKA_API ActionTerminatedException : public Exception {
 public:
-    ActionTerminatedException(const std::string& error);
+    ActionTerminatedException(const std::string& error)
+    :Exception( error )
+    {
+        //Fix the ld error on Mac OS.
+        //Where is the definition of the constructor?
+    }
 };
 
 } // cppkafka
