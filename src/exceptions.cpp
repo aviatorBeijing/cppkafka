@@ -121,9 +121,4 @@ Error QueueException::get_error() const {
 
 // ActionTerminatedException
 
-ActionTerminatedException::ActionTerminatedException(const string& error) 
-: Exception(error) {
-
-}
-    
 } // cppkafka
